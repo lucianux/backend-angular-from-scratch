@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "repartos-88938": {
+      "hosting": {
+        "ngx-admin-demo": [
+          "repartos-88938"
+        ]
+      }
+    }
+  }
+}

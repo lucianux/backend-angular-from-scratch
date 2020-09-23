@@ -1,0 +1,15 @@
+<h1>Comercios</h1>
+<div class="lists row">
+    <div class="col-md-12 col-lg-6 col-xxxl-6">
+      <nb-card class="list-card">
+        <nb-card-header>Lista de comercios</nb-card-header>
+        <nb-card-body>
+          <nb-list>
+            <nb-list-item *ngFor="let comercio of comercios">
+              {{ comercio.nombre }}
+            </nb-list-item>
+          </nb-list>
+        </nb-card-body>
+      </nb-card>
+    </div>
+</div>
