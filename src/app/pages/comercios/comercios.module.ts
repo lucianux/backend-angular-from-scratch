@@ -3,15 +3,19 @@ import { ComerciosComponent } from './comercios.component';
 import { CommonModule } from '@angular/common';
 import {
     NbCardModule,
-    NbListModule
+    NbListModule,
+    NbButtonModule
 } from '@nebular/theme';
 
 @NgModule({
     imports: [
         NbCardModule,
         NbListModule,
+        NbButtonModule,
         CommonModule
     ],
-    declarations: [ ComerciosComponent ],
+    declarations: [
+        ComerciosComponent
+    ]
 })
 export class ComerciosModule { }

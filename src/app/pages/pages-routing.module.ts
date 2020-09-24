@@ -4,11 +4,21 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ComerciosComponent } from './comercios/comercios.component';
+import { EditarComponent } from './editar/editar.component';
+import { AgregarComponent } from './agregar/agregar.component';
 
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
   children: [
+    {
+      path: 'editar/:uid',
+      component: EditarComponent
+    },
+    {
+      path: 'agregar',
+      component: AgregarComponent
+    },
     {
       path: 'comercios',
       component: ComerciosComponent

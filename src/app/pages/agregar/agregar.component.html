@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-md-12">
+      <nb-card>
+        <nb-card-header>Publicar comercio</nb-card-header>
+        <nb-card-body>
+          <form class="form-horizontal">
+            <div class="form-group row">
+              <label for="nameCommerce" class="label col-sm-3 form-control-label">Nombre</label>
+              <div class="col-sm-9">
+                <input
+                  nbInput
+                  fullWidth
+                  type="text"
+                  id="nameCommerce"
+                  name="nameCommerce"
+                  placeholder="Nombre"
+                  [(ngModel)]="comercioFormulario.nombre">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="address" class="label col-sm-3 form-control-label">Dirección</label>
+              <div class="col-sm-9">
+                <input
+                  nbInput
+                  fullWidth
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Dirección"
+                  [(ngModel)]="comercioFormulario.direccion">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="phone" class="label col-sm-3 form-control-label">Teléfono</label>
+              <div class="col-sm-9">
+                <input
+                  nbInput
+                  fullWidth
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="Teléfono"
+                  [(ngModel)]="comercioFormulario.telefono">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="category" class="label col-sm-3 form-control-label">Categoría</label>
+              <div class="col-sm-9">
+                <nb-select [(ngModel)]="comercioFormulario.tipo" id="category" name="category">
+                  <nb-option value="pizzas">Pizzas y Empanadas</nb-option>
+                  <nb-option value="heladerias">Heladerías</nb-option>
+                  <nb-option value="pollos">Pollos</nb-option>
+                </nb-select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <!-- <button type="submit" nbButton status="warning">Sign in</button> -->
+                <button
+                  nbButton
+                  type="button"
+                  status="primary"
+                  (click)="publicarComercio()">Publicar</button>
+              </div>
+            </div>
+          </form>
+        </nb-card-body>
+      </nb-card>
+    </div>
+  </div>
