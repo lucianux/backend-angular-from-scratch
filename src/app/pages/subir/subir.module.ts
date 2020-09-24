@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
-import { AgregarComponent } from './agregar.component';
+import { SubirComponent } from './subir.component';
 import { CommonModule } from '@angular/common';
 import {
-    NbCardModule,
-    NbListModule,
-    NbInputModule,
     NbButtonModule,
-    NbSelectModule
+    NbCardModule,
+    NbInputModule
 } from '@nebular/theme';
 import { ThemeModule } from '../../@theme/theme.module';
 import { FormsModule as ngFormsModule } from '@angular/forms';
@@ -14,16 +12,14 @@ import { FormsModule as ngFormsModule } from '@angular/forms';
 @NgModule({
     imports: [
         ThemeModule,
-        NbCardModule,
-        NbListModule,
         NbInputModule,
+        NbCardModule,
         NbButtonModule,
-        NbSelectModule,
         CommonModule,
         ngFormsModule
     ],
     declarations: [
-        AgregarComponent
+        SubirComponent
     ]
 })
-export class AgregarModule { }
+export class SubirModule { }

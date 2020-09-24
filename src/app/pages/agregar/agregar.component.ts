@@ -26,4 +26,5 @@ export class AgregarComponent {
     this._comercioService.publicarComercio(this.comercioFormulario);
     this.router.navigate(['/pages/comercios']);
   }
+
 }

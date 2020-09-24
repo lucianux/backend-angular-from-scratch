@@ -1,0 +1,14 @@
+<div class="lists row">
+  <div class="col-md-12">
+    <nb-card class="list-card">
+        <nb-card-header>Listado de archivos</nb-card-header>
+        <nb-card-body>
+            <nb-list>
+                <nb-list-item *ngFor="let file of files">
+                    <a href="{{ file.link | async }}">{{ file.name }}</a>
+                </nb-list-item>
+            </nb-list>
+        </nb-card-body>
+        </nb-card>
+    </div>
+</div>
