@@ -45,14 +45,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Register',
         link: '/auth/register',
       },
-      {
-        title: 'Request Password',
-        link: '/auth/request-password',
-      },
-      {
-        title: 'Reset Password',
-        link: '/auth/reset-password',
-      },
+      // {
+      //   title: 'Request Password',
+      //   link: '/auth/request-password',
+      // },
+      // {
+      //   title: 'Reset Password',
+      //   link: '/auth/reset-password',
+      // },
     ],
   },
 ];

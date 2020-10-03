@@ -8,6 +8,9 @@ import {
   NbRequestPasswordComponent,
   NbResetPasswordComponent,
 } from '@nebular/auth';
+import { NgxLoginComponent } from './pages/login/login.component';
+import { NgxRegisterComponent } from './pages/register/register.component';
+import { NgxLogoutComponent } from './pages/logout/logout.component';
 
 export const routes: Routes = [
   {
@@ -20,31 +23,49 @@ export const routes: Routes = [
     component: NbAuthComponent,
     children: [
       {
-        path: '',
-        component: NbLoginComponent,
-      },
-      {
         path: 'login',
-        component: NbLoginComponent,
+        component: NgxLoginComponent,
       },
       {
         path: 'register',
-        component: NbRegisterComponent,
+        component: NgxRegisterComponent,
       },
       {
         path: 'logout',
-        component: NbLogoutComponent,
-      },
-      {
-        path: 'request-password',
-        component: NbRequestPasswordComponent,
-      },
-      {
-        path: 'reset-password',
-        component: NbResetPasswordComponent,
-      },
+        component: NgxLogoutComponent,
+      }
     ],
   },
+  // {
+  //   path: 'auth',
+  //   component: NbAuthComponent,
+  //   children: [
+  //     {
+  //       path: '',
+  //       component: NbLoginComponent,
+  //     },
+  //     {
+  //       path: 'login',
+  //       component: NbLoginComponent,
+  //     },
+  //     {
+  //       path: 'register',
+  //       component: NbRegisterComponent,
+  //     },
+  //     {
+  //       path: 'logout',
+  //       component: NbLogoutComponent,
+  //     },
+  //     {
+  //       path: 'request-password',
+  //       component: NbRequestPasswordComponent,
+  //     },
+  //     {
+  //       path: 'reset-password',
+  //       component: NbResetPasswordComponent,
+  //     },
+  //   ],
+  // },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
   { path: '**', redirectTo: 'pages' },
 ];
