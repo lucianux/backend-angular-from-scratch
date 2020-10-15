@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ComercioService } from '../../services/comercio.service';
 import { Comercio } from '../../model/comercio';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'ngx-comercios-elements',
@@ -15,6 +16,7 @@ export class ComerciosComponent {
 
   constructor(
     private router: Router,
+    private authServ: AuthService,
     private comercioSer: ComercioService)
   {
     this.comercios = new Array<Comercio>();
@@ -38,5 +40,9 @@ export class ComerciosComponent {
 
   public goToEditar(comercioAactualizar: Comercio) {
     this.router.navigate(['/pages/editar', comercioAactualizar.id]);
+  }
+
+  public isLogged(): boolean {
+    return this.authServ.isLoggedIn();
   }
 }

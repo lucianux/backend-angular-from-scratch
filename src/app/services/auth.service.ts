@@ -1,8 +1,10 @@
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
 import { AngularFireAuth } from "@angular/fire/auth";
-import * as firebase from "firebase/app";
+//import * as firebase from "firebase/app";
+import * as firebase from "firebase";
 import { auth } from 'firebase/app';
+import { first } from 'rxjs/operators';
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
@@ -62,5 +64,16 @@ export class AuthService {
     public logout() {
         localStorage.setItem('user', null);
         this._afAuth.signOut();
+    }
+
+    public isLoggedIn() {
+        //console.log("Usuario actual: " + firebase.auth().currentUser);
+        //console.log("Hay usuario: ", (firebase.auth().currentUser != null));
+
+        //return this._afAuth.authState.pipe(first()).toPromise();
+        //return (firebase.auth().currentUser != null)
+
+        const user = JSON.parse(localStorage.getItem('user'));
+        return user !== null;
     }
 }

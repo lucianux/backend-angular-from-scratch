@@ -1,14 +1,18 @@
 <div class="lists row">
   <div class="col-md-12 col-lg-12">
     <nb-card class="list-card">
-      <nb-card-header>Comercios <button nbButton status="info" class="leftSpace"
-          (click)="goToAgregar()">Agregar</button></nb-card-header>
+      <nb-card-header>Comercios <button nbButton status="info"
+        class="leftSpace" (click)="goToAgregar()"
+        *ngIf="isLogged()">Agregar</button>
+      </nb-card-header>
       <nb-card-body>
         <nb-list>
           <nb-list-item *ngFor="let comercio of comercios">
             <span>{{ comercio.nombre }}</span>
-            <button nbButton status="danger" class="leftSpace" (click)="eliminarComercio(comercio)">Borrar</button>
-            <button nbButton status="success" class="leftSpace" (click)="goToEditar(comercio)">Editar</button>
+            <span *ngIf="isLogged()">
+              <button nbButton status="danger" class="leftSpace" (click)="eliminarComercio(comercio)">Borrar</button>
+              <button nbButton status="success" class="leftSpace" (click)="goToEditar(comercio)">Editar</button>
+            </span>
           </nb-list-item>
         </nb-list>
       </nb-card-body>

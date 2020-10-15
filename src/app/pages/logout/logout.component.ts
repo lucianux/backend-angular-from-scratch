@@ -26,6 +26,7 @@ export class NgxLogoutComponent extends NbLogoutComponent {
 
     logout(strategy: string): void {
         this._authService.logout();
+        this.router.navigate(['/']);
     }
 
 }
